@@ -7,8 +7,6 @@
 
 /**
  * Description of Controller
- *
- * @author KudiezoJr
  */
 class Controller {
     //put your code here

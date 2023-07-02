@@ -7,8 +7,6 @@
 
 /**
  * Description of Pages
- *
- * @author KudiezoJr
  */
 class Paginas extends Controller {
     //put your code here

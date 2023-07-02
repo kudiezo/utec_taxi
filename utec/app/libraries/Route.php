@@ -7,8 +7,6 @@
 
 /**
  * Description of Route
- *
- * @author KudiezoJr
  */
 class Route {
     //put your code here
