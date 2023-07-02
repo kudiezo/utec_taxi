@@ -1,6 +1,6 @@
 <?php
 
-define('URL', 'http://localhost/utec/');
+define('URL', 'http://localhost/sistema_de_taxi_utec/');
 define('APP_DIR', dirname(__FILE__).'\\' );
 define('PUBLIC_DIR', dirname(__FILE__, 2).'\public');
 define('APP_NAME', 'Táxis UTEC');

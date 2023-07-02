@@ -22,7 +22,7 @@
                     <a href=""><img src="../../../public/img/logo/LOGO-UTEC-AMARELO-PNG.png" alt=""></a>
                     <span>ENTRAR NA SUA CONTA</span>
                 </div>
-                <form class="row g-3" action="post">
+                <form class="row g-3" method="post">
                     <div class="col-md-12">
                         <label for="inputEmail4" class="form-label">Email</label>
                         <input type="email" class="form-control" id="inputEmail4">

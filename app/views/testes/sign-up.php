@@ -21,19 +21,19 @@
                 <div class="cabecalho-form">
                     <a href=""><img src="../../../public/img/logo/LOGO-UTEC-AMARELO-PNG.png" alt=""></a>
                     <div class="row g-3">
-                        <div class="col-md-9">
+                        <div class="col-md-7">
                             <span>REGISTE-SE COMO CLIENTE</span>
                         </div>
-                        <div class="col-md-3">
+                        <div class="col-md-5">
                             <select id="tipoCliente" class="form-select" required>
-                                <option value="" selected disabled>...</option>
+                                <option value="" selected disabled>Selecione o tipo de utilizador</option>
                                 <option>Cliente</option>
                                 <option>Motorista</option>
                             </select>
                         </div>
                     </div>
                 </div>
-                <form class="row g-3">
+                <form class="row g-3" method="post">
                     <div class="col-md-6">
                         <label for="nomeCompleto" class="form-label">Nome Completo</label>
                         <input type="text" class="form-control" id="nomeCompleto" required>
@@ -45,7 +45,7 @@
                     <div class="col-md-6">
                         <label for="tipoMotorista" class="form-label">Tipo</label>
                         <select id="tipoMotorista" class="form-select" required>
-                            <option value="" selected disabled>...</option>
+                            <option value="" selected disabled>Selecione o tipo de motorista</option>
                             <option>Empresa</option>
                             <option>Particular</option>
                         </select>
@@ -58,7 +58,7 @@
                         <label for="morada" class="form-label">Morada</label>
                         <input type="text" class="form-control" id="morada" required>
                     </div>
-                    <div class="col-md-8">
+                    <div class="col-md-12">
                         <label for="inputData" class="form-label">Data de nascimento</label>
                         <input type="date" class="form-control" id="inputData" required>
                     </div>
@@ -78,7 +78,7 @@
         </div>
     </div>
 
-    <footer>
+    <footer class="mt-3">
         <span>@ UTEC 2023. TODOS OS DIREITOS RESERVADOS.</span>
         <div class="icons-social-media">
             <a href=""><i class="fa-brands fa-facebook"></i></a>
