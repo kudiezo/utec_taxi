@@ -7,9 +7,9 @@
 
 /**
  * Description of ClienteRepository
- *
- * @author kudiezo.jr
  */
+require_once APP_DIR . '/dbconfig/ConexaoPDO.php';
+
 class ClienteRepository extends ConexaoPDO {
     public function insert(Cliente $cliente) {
         

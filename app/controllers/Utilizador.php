@@ -7,10 +7,9 @@
 
 /**
  * Description of Utilizador
- *
- * @author kudiezo.jr
  */
-class Utilizador {
+require_once APP_DIR . '/services/UtilizadorServices.php';
+class Utilizador extends Controller {
     //put your code here
     //put your code here
     private $utilizadorServices;
@@ -22,22 +21,22 @@ class Utilizador {
     }
     
     public function login() {
-        $username = filter_input(INPUT_POST, 'username', FILTER_SANITIZE_STRING);
+        $username = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_STRING);
         $senha = filter_input(INPUT_POST, 'password', FILTER_SANITIZE_STRING);
         
         $resClienteLogin = $this->utilizadorServices->logarCliente($username, $senha);
         $resMotoristaLogin = $this->utilizadorServices->logarMotorista($username, $senha);
         
-        if($resMotoristaLogin != false) {
+        if($resClienteLogin != false) {
             session_start();
             $_SESSION['infoUser'] = $resClienteLogin;
-            $this->view('', []);
+            $this->view('cliente/home-cliente', []);
         } 
         elseif($resMotoristaLogin != false) {
             session_start();
             $_SESSION['infoUser'] = $resMotoristaLogin;
         } else {
-            $this->view('', []);
+            $this->view('paginas/login-form', []);
         }
     }
     
@@ -45,6 +44,6 @@ class Utilizador {
         session_start();
         session_unset();
         session_destroy();
-        $this->view('paginas/login', []);
+        $this->view('paginas/login-form', []);
     }
 }

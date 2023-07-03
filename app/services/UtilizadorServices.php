@@ -7,9 +7,9 @@
 
 /**
  * Description of UtilizadorServices
- *
- * @author kudiezo.jr
  */
+require_once APP_DIR . '/repositories/ClienteRepository.php';
+require_once APP_DIR . '/repositories/MotoristaRepository.php';
 class UtilizadorServices {
     //put your code here
     private $clienteRepository;

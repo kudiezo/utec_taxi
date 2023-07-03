@@ -28,14 +28,14 @@
                     <a href="<?= URL . 'paginas/'?>"><img src="<?= URL . 'public/img/logo/LOGO-UTEC-AMARELO-PNG.png' ?>" alt=""></a>
                     <span>ENTRAR NA SUA CONTA</span>
                 </div>
-                <form class="row g-3" method="post">
+                <form class="row g-3" method="post" action="<?= URL . 'utilizador/login'; ?>">
                     <div class="col-md-12">
                         <label for="inputEmail4" class="form-label">Email</label>
-                        <input type="email" class="form-control" id="inputEmail4">
+                        <input type="email" name="email" class="form-control" id="inputEmail4">
                     </div>
                     <div class="col-md-12">
                         <label for="inputPassword4" class="form-label">Palavra-passe</label>
-                        <input type="password" class="form-control" id="inputPassword4">
+                        <input type="password" name="password" class="form-control" id="inputPassword4">
                     </div>
                     <div class="col-12">
                         <button type="submit" class="btn btn-primary">ENTRAR</button>

@@ -7,9 +7,10 @@
 
 /**
  * Description of MotoristaRepository
- *
- * @author kudiezo.jr
  */
+
+ require_once APP_DIR . '/dbconfig/ConexaoPDO.php';
+
 class MotoristaRepository extends ConexaoPDO {
     public function insert(Motorista $motorista) {
         

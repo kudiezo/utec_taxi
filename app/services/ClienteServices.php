@@ -7,8 +7,6 @@
 
 /**
  * Description of ClienteServices
- *
- * @author kudiezo.jr
  */
 class ClienteServices {
     //put your code here
