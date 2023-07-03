@@ -5,7 +5,7 @@ class ConexaoPDO extends PDO {
     private $sql;
     
 //CONSTRUTOR
-    public function __construct($dsn='mysql:dbname=;host=127.0.0.1',$username='root', $password='', array $options=null) {
+    public function __construct($dsn='mysql:dbname=`sistema_de_taxi_utec`;host=127.0.0.1',$username='root', $password='', array $options=null) {
         try{
             parent::__construct($dsn, $username, $password, $options);
             $this->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
