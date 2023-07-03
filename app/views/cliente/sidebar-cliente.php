@@ -47,6 +47,11 @@ $nomeProjecto = '/' . session_name();
                 <a href="">HISTÓRICO DE VIAGEM</a>
             </div>
             <div class="fundo-sidebar">
-                <i class="fa-solid fa-user"></i><span>Garcia Babe</span>
+                <div class="dropdown">
+                    <i class="fa-solid fa-user"></i><span>Garcia Babe</span>
+                    <ul>
+                        <li><a href="#">Sair</a></li>
+                    </ul>
+                </div>
             </div>
         </nav>

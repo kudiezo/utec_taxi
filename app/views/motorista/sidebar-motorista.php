@@ -23,7 +23,7 @@
         <nav class="sidebar">
             <div class="logo-sidebar">
                 <a href=""><img src="<?= URL . 'public/img/logo/LOGO-UTEC-BRANCO-PNG.png' ?>" alt=""></a><br>
-                <span>CLIENTE</span>
+                <span>MOTORISTA</span>
             </div>
             <hr>
             <div class="topo-sidebar">
@@ -32,6 +32,11 @@
                 <a href="">TOTAL DE KM PERCORRIDOS</a>
             </div>
             <div class="fundo-sidebar">
-                <i class="fa-solid fa-user"></i><span>Don Toretto</span>
+                <div class="dropdown">
+                    <i class="fa-solid fa-user"></i><span>Don Toretto</span>
+                    <ul>
+                        <li><a href="#">Sair</a></li>
+                    </ul>
+                </div>
             </div>
         </nav>
