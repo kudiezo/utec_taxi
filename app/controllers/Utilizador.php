@@ -28,19 +28,23 @@ class Utilizador extends Controller {
         $resMotoristaLogin = $this->utilizadorServices->logarMotorista($username, $senha);
         
         if($resClienteLogin != false) {
+            session_name("Taxis_UTEC");
             session_start();
             $_SESSION['infoUser'] = $resClienteLogin;
             $this->view('cliente/home-cliente', []);
         } 
         elseif($resMotoristaLogin != false) {
+            session_name("Taxis_UTEC");
             session_start();
             $_SESSION['infoUser'] = $resMotoristaLogin;
+            $this->view('motorista/home-motorista', []);
         } else {
             $this->view('paginas/login-form', []);
         }
     }
     
     public function logout() {
+        session_name("Taxis_UTEC");
         session_start();
         session_unset();
         session_destroy();
