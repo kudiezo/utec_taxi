@@ -25,7 +25,7 @@
         <div class="corpo">
             <div class="conteudo-sign">
                 <div class="cabecalho-form">
-                    <a href=""><img src="<?= URL . 'public/img/logo/LOGO-UTEC-AMARELO-PNG.png' ?>" alt=""></a>
+                    <a href="<?= URL . 'paginas/'?>"><img src="<?= URL . 'public/img/logo/LOGO-UTEC-AMARELO-PNG.png' ?>" alt=""></a>
                     <div class="row g-3">
                         <div class="col-md-7">
                             <span>REGISTE-SE COMO CLIENTE</span>

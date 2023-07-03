@@ -25,7 +25,7 @@
         <div class="corpo">
             <div class="conteudo-login">
                 <div class="cabecalho-form">
-                    <a href=""><img src="<?= URL . 'public/img/logo/LOGO-UTEC-AMARELO-PNG.png' ?>" alt=""></a>
+                    <a href="<?= URL . 'paginas/'?>"><img src="<?= URL . 'public/img/logo/LOGO-UTEC-AMARELO-PNG.png' ?>" alt=""></a>
                     <span>ENTRAR NA SUA CONTA</span>
                 </div>
                 <form class="row g-3" method="post">
