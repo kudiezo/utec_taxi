@@ -11,7 +11,16 @@
  * @author kudiezo.jr
  */
 class MotoristaServices {
-    //put your code here
+    //put your code here 
+    private $motoristaRepository;
     
+    public function __construct() {
+        $this->motoristaRepository = new MotoristaRepository();
+    }
     
+    public function cadastrar(Motorista $motorista) { 
+        $sqlScript = "";
+        $resultado = $this->motoristaRepository->insert($sqlScript);
+        return $resultado;
+    }
 }

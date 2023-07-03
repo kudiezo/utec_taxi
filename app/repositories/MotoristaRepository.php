@@ -13,7 +13,22 @@
 
 class MotoristaRepository extends ConexaoPDO {
     public function insert(Motorista $motorista) {
-        
+        $this->setSql("");
+        $stmt = $this->prepare($this->getSql());
+        try {
+            $stmt->bindValue(":email", $cliente->getEmail());
+            $stmt->bindValue(":nome", $cliente->getNome());
+            $stmt->bindValue(":password", $cliente->getSenha());
+            $stmt->bindValue(":morada", $cliente->getMorada());
+            $stmt->bindValue(":dataNasc", $cliente->getDataNasc());;
+            $stmt->execute();
+            $stmt->closeCursor();
+            parent::__destruct();
+        } catch (Exception $ex) {
+            $this->setErro($ex->getMessage());
+            parent::__destruct();
+            return FALSE;
+        }
     }
 
     public function delete() {
