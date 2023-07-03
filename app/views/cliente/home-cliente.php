@@ -32,19 +32,32 @@
 
 
                 <table class="mapa">
-                    <?php for ($i = 0; $i < 15; $i++) { ?>
+                    <?php for ($i = -1; $i < 15; $i++) { ?>
                         <tr>
-                            <?php for ($j = 0; $j < 15; $j++) { ?>
-                                <td>
-                                    <?php if ($i === 12 && $j === 8) { ?> <i class="fa-solid fa-car-side"></i>
-                                    <?php } ?>
-                                    <?php if ($i === 1 && $j === 5) { ?> <i class="fa-solid fa-car-side"></i>
-                                    <?php } ?>
-                                    <?php if ($i === 8 && $j === 3) { ?> <i class="fa-solid fa-motorcycle"></i>
-                                    <?php } ?>
-                                    <?php if ($i === 3 && $j === 13) { ?> <i class="fa-solid fa-person"></i>
-                                    <?php } ?>
-                                </td>
+                            <?php for ($j = -1; $j < 15; $j++) { ?>
+                                <?php if ($i === -1 || $j === -1) { ?>
+                                    <td style="background-color: #ffc500;">
+                                        <?php if ($i === -1) if ($j === -1)
+                                            print('x/y');
+                                        else
+                                            print($j);
+                                        else
+                                            print($i); ?>
+                                    </td>
+                                <?php } else { ?>
+                                    <td>
+                                        <?php if ($i === 12 && $j === 8) { ?> <i class="fa-solid fa-car-side"></i>
+                                        <?php } ?>
+                                        <?php if ($i === 1 && $j === 5) { ?> <i class="fa-solid fa-car-side"></i>
+                                        <?php } ?>
+                                        <?php if ($i === 8 && $j === 3) { ?> <i class="fa-solid fa-motorcycle"></i>
+                                        <?php } ?>
+                                        <?php if ($i === 3 && $j === 13) { ?> <i class="fa-solid fa-person"></i>
+                                        <?php } ?>
+                                    </td>
+                                <?php } ?>
+
+
                             <?php } ?>
                         </tr>
                     <?php } ?>
