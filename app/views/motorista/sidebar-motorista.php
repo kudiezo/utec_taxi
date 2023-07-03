@@ -1,20 +1,3 @@
-<?php /*
-Header padrão para todas as páginas
-*/
-    ?>
-<?php
-include_once 'constantes/nomeProjecto.php';
-if (session_status() !== PHP_SESSION_ACTIVE) {
-    //session_name("UTEC");
-    session_start();
-}
-if (!isset($_SESSION['username'])) {
-    header("Location: " . '/Alpha_Outdoors/index.php?op=login');
-}
-$nomeProjecto = '/' . session_name();
-//require_once $nomeProjecto . '/constantes/nomeProjecto.php';
-?>
-
 <html lang="pt">
 
 <head>
@@ -32,7 +15,7 @@ $nomeProjecto = '/' . session_name();
     <link rel="stylesheet" href="<?= URL . 'public/css/bootstrap.min.css' ?>">
     <link rel="stylesheet" href="<?= URL . 'public/fontawesome/css/all.min.css' ?>">
     <link rel="stylesheet" href="<?= URL . 'public/fontawesome/css/fontawesome.min.css' ?>">
-    <title>Tela do Cliente | Táxis UTEC</title>
+    <title>Tela do Motorista | Táxis UTEC</title>
 </head>
 
 <body>
@@ -45,10 +28,10 @@ $nomeProjecto = '/' . session_name();
             <div class="topo-sidebar">
                 <a href="">MÉTODO DE PAGAMENTO</a>
                 <a href="">MEU ENDEREÇO</a>
-                <a href="">CLASSIFICAÇÃO</a>
+                <a href="">MINHA CLASSIFICAÇÃO</a>
                 <a href="">HISTÓRICO DE VIAGEM</a>
             </div>
             <div class="fundo-sidebar">
-                <i class="fa-solid fa-user"></i><span>Garcia Babe</span>
+                <i class="fa-solid fa-user"></i><span>Don Toretto</span>
             </div>
         </nav>
