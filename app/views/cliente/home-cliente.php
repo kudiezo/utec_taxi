@@ -39,6 +39,7 @@
                         </tr>
                     <?php } ?>
                 </table>
+                
                 <div class="opcoes">
                     <div class="escolher-carro">
                         <span>FAÇA A SUA ESCOLHA:</span>

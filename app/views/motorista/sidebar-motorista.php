@@ -22,14 +22,14 @@
     <div class="conteudo">
         <nav class="sidebar">
             <div class="logo-sidebar">
-                <a href=""><img src="<?= URL . 'public/img/logo/LOGO-UTEC-BRANCO-PNG.png' ?>" alt=""></a>
+                <a href=""><img src="<?= URL . 'public/img/logo/LOGO-UTEC-BRANCO-PNG.png' ?>" alt=""></a><br>
+                <span>CLIENTE</span>
             </div>
             <hr>
             <div class="topo-sidebar">
-                <a href="">MÉTODO DE PAGAMENTO</a>
-                <a href="">MEU ENDEREÇO</a>
                 <a href="">MINHA CLASSIFICAÇÃO</a>
                 <a href="">HISTÓRICO DE VIAGEM</a>
+                <a href="">TOTAL DE KM PERCORRIDOS</a>
             </div>
             <div class="fundo-sidebar">
                 <i class="fa-solid fa-user"></i><span>Don Toretto</span>
