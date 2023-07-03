@@ -11,7 +11,7 @@
         rel="stylesheet">
 
     <link rel="stylesheet" href="<?= URL . 'public/css/bem-vindo.css' ?>">
-    <link rel="stylesheet" href="<?= URL . 'public/css/home-cliente.css' ?>">
+    <link rel="stylesheet" href="<?= URL . 'public/css/home-utilizadores.css' ?>">
     <link rel="stylesheet" href="<?= URL . 'public/css/bootstrap.min.css' ?>">
     <link rel="stylesheet" href="<?= URL . 'public/fontawesome/css/all.min.css' ?>">
     <link rel="stylesheet" href="<?= URL . 'public/fontawesome/css/fontawesome.min.css' ?>">
