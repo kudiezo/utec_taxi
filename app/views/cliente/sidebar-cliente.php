@@ -1,16 +1,4 @@
-<?php
-/*
-if (session_status() !== PHP_SESSION_ACTIVE) {
-    //session_name("UTEC");
-    session_start();
-}
-if (!isset($_SESSION['username'])) {
-    header("Location: " . '/Alpha_Outdoors/index.php?op=login');
-}
-$nomeProjecto = '/' . session_name();
-*/
-//require_once $nomeProjecto . '/constantes/nomeProjecto.php';
-?>
+<?php require_once APP_DIR . '/helpers/controlo_sessao_login.php'; ?>
 
 <html lang="pt">
 
@@ -47,7 +35,7 @@ $nomeProjecto = '/' . session_name();
             </div>
             <div class="fundo-sidebar">
                 <div class="dropdown">
-                    <i class="fa-solid fa-user"></i><span>Garcia Babe</span>
+                    <i class="fa-solid fa-user"></i><span><?= $_SESSION['infoUser']->nome ;?></span>
                     <ul>
                         <li><a href="<?= URL . 'utilizador/logout'; ?>">Sair</a></li>
                     </ul>

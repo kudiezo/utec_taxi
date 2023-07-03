@@ -1,3 +1,5 @@
+<?php require_once APP_DIR . '/helpers/verificacao_sessao.php'; ?>
+
 <html lang="pt">
 
 <head>

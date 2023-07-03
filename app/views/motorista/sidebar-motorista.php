@@ -1,3 +1,5 @@
+<?php require_once APP_DIR . '/helpers/controlo_sessao_login.php'; ?>
+
 <html lang="pt">
 
 <head>
@@ -33,7 +35,7 @@
             </div>
             <div class="fundo-sidebar">
                 <div class="dropdown">
-                    <i class="fa-solid fa-user"></i><span>Don Toretto</span>
+                    <i class="fa-solid fa-user"></i><span><?= $_SESSION['infoUser']->nome ;?></span>
                     <ul>
                         <li><a href="<?= URL . 'utilizador/logout'; ?>">Sair</a></li>
                     </ul>
