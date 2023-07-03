@@ -1,9 +1,5 @@
-<?php /*
-Header padrão para todas as páginas
-*/
-    ?>
 <?php
-include_once 'constantes/nomeProjecto.php';
+/*
 if (session_status() !== PHP_SESSION_ACTIVE) {
     //session_name("UTEC");
     session_start();
@@ -12,6 +8,7 @@ if (!isset($_SESSION['username'])) {
     header("Location: " . '/Alpha_Outdoors/index.php?op=login');
 }
 $nomeProjecto = '/' . session_name();
+*/
 //require_once $nomeProjecto . '/constantes/nomeProjecto.php';
 ?>
 
