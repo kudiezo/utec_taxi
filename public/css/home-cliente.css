@@ -58,6 +58,7 @@
     padding: 5px;
     margin-top: auto;
     margin-bottom: 20px;
+    cursor: pointer;
 }
 
 .fundo-sidebar:hover {
@@ -98,7 +99,7 @@
 
 .dropdown ul li a {
     text-decoration: none;
-    color: #ffc500;
+    color: red;
 }
 
 .dropdown hr {
