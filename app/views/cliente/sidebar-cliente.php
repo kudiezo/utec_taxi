@@ -43,14 +43,13 @@ $nomeProjecto = '/' . session_name();
             <div class="topo-sidebar">
                 <a href="">MÉTODO DE PAGAMENTO</a>
                 <a href="">MEU ENDEREÇO</a>
-                <a href="">CLASSIFICAÇÃO</a>
                 <a href="">HISTÓRICO DE VIAGEM</a>
             </div>
             <div class="fundo-sidebar">
                 <div class="dropdown">
                     <i class="fa-solid fa-user"></i><span>Garcia Babe</span>
                     <ul>
-                        <li><a href="#">Sair</a></li>
+                        <li><a href="<?= URL . 'utilizador/logout'; ?>">Sair</a></li>
                     </ul>
                 </div>
             </div>

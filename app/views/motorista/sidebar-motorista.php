@@ -35,7 +35,7 @@
                 <div class="dropdown">
                     <i class="fa-solid fa-user"></i><span>Don Toretto</span>
                     <ul>
-                        <li><a href="#">Sair</a></li>
+                        <li><a href="<?= URL . 'utilizador/logout'; ?>">Sair</a></li>
                     </ul>
                 </div>
             </div>
