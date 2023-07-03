@@ -21,7 +21,7 @@
 
 <body>
     <div class="conteudo">
-        <?= require_once 'navbar-cliente.php'; ?>
+        <?php require_once 'navbar-cliente.php'; ?>
 
         <div class="corpo">
             <div class="conteudo-corpo">
