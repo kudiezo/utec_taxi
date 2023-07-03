@@ -23,7 +23,7 @@ class MotoristaServices {
     public function cadastrar(Motorista $motorista) { 
         $sqlScript = "CALL cadastrar_motorista('{$motorista->getEmail()}', '{$motorista->getNome()}', "
         . "'{$motorista->getSenha()}', '{$motorista->getMorada()}', '{$motorista->getDataNasc()}', "
-        . "'{$motorista->getTipoVeiculo()}', '{$motorista->getEmpresa()}');";
+        . "{$motorista->getTipoVeiculo()}, {$motorista->getEmpresa()});";
         $resultado = $this->motoristaRepository->insert($sqlScript);
         return $resultado;
     }

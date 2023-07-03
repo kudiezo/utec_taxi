@@ -37,7 +37,7 @@
                     <div class="col-md-6">
                         <select id="tipoCliente" class="form-select" required>
                             <option value="" selected disabled>Selecione o tipo de utilizador</option>
-                            <option value="Cliente">Cliente</option>
+                            <option value="Cliente" selected="">Cliente</option>
                             <option value="Motorista">Motorista</option>
                         </select>
                     </div>
@@ -50,20 +50,20 @@
                         <input type="date" name="dataNasc" class="form-control" id="inputData" required>
                     </div>
                     
-                    <div class="col-md-6">
+                    <div class="col-md-6 areaOpcional bg-light p-2" style="display: none;">
                         <label for="tipoVeiculo" class="form-label">Viatura</label>
                         <select id="tipoVeiculo" name="tipoVeiculo" class="form-select" disabled required>
-                            <option value="" selected disabled>Selecione o seu tipo de viatura</option>
-                            <option value="1">Ligeiro</option>
+                            <option value="" disabled>Selecione o seu tipo de viatura</option>
+                            <option value="1" selected>Ligeiro</option>
                             <option value="2">Carrinha</option>
                             <option value="3">Moto</option>
                         </select>
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-md-6 areaOpcional bg-light p-2" style="display: none;">
                         <label for="tipoMotorista" class="form-label">Tipo de Motorista</label>
                         <select id="tipoMotorista" name="tipoMotorista" class="form-select" disabled required>
-                            <option value="" selected disabled>Selecione o tipo de motorista</option>
-                            <option value="1">Particular</option>
+                            <option value="" disabled>Selecione o tipo de motorista</option>
+                            <option value="1" selected>Particular</option>
                             <option value="2">Empresa</option>
                         </select>
                     </div>

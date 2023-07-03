@@ -34,10 +34,20 @@ class Motoristas extends Controller {
         $dataNasc = filter_input(INPUT_POST, 'dataNasc', FILTER_SANITIZE_STRING);
         $morada = filter_input(INPUT_POST, 'morada', FILTER_SANITIZE_STRING);
         $tipoVeiculo = filter_input(INPUT_POST, 'tipoVeiculo', FILTER_SANITIZE_STRING);
-        $empresa = filter_input(INPUT_POST, 'empresa', FILTER_SANITIZE_STRING);
+        $empresa = filter_input(INPUT_POST, 'tipoMotorista', FILTER_SANITIZE_STRING);
         $email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_STRING);
         $password1  = filter_input(INPUT_POST, 'password', FILTER_SANITIZE_STRING);
         $password2  = filter_input(INPUT_POST, 'confPassword', FILTER_SANITIZE_STRING);
+        
+//        $this->motoristaModel->setNome($nome);
+//        $this->motoristaModel->setDataNasc($dataNasc);
+//        $this->motoristaModel->setMorada($morada);
+//        $this->motoristaModel->setEmail($email);
+//        $this->motoristaModel->setTipoVeiculo($tipoVeiculo);
+//        $this->motoristaModel->setEmpresa($tipoMotorista);
+//        $this->motoristaModel->setSenha($password1);
+//        
+//        var_dump($this->motoristaModel);
         
         if($password1 === $password2) {
             $this->motoristaModel->setNome($nome);
