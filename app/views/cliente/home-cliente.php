@@ -30,20 +30,11 @@
                     <span>PARA ONDE DESEJA IR?</span>
                 </div>
 
-
                 <table class="mapa">
                     <?php for ($i = 0; $i < 15; $i++) { ?>
-                        <tr>
+                        <tr class="tr <?php echo "l" . $i ?>">
                             <?php for ($j = 0; $j < 15; $j++) { ?>
-                                <td>
-                                    <?php if ($i === 12 && $j === 8) { ?> <i class="fa-solid fa-car-side"></i>
-                                    <?php } ?>
-                                    <?php if ($i === 1 && $j === 5) { ?> <i class="fa-solid fa-car-side"></i>
-                                    <?php } ?>
-                                    <?php if ($i === 8 && $j === 3) { ?> <i class="fa-solid fa-motorcycle"></i>
-                                    <?php } ?>
-                                    <?php if ($i === 3 && $j === 13) { ?> <i class="fa-solid fa-person"></i>
-                                    <?php } ?>
+                                <td class="td <?php echo "c" . $j ?>" id="<?php echo "x" . $i . " " . "y" . $j ?>">
                                 </td>
                             <?php } ?>
                         </tr>
@@ -54,8 +45,8 @@
                         <span>FAÇA A SUA ESCOLHA:</span>
                         <select id="tipo-escolha" class="form-select" required>
                             <option value="" selected disabled>...</option>
-                            <option>Táxi mais próximo</option>
-                            <option>Selecionar táxi específico</option>
+                            <option value="1">Táxi mais próximo</option>
+                            <option value="2">Selecionar táxi específico</option>
                         </select>
                     </div>
                     <div class="tempo-estimado">
@@ -73,6 +64,7 @@
             </div>
         </div>
     </div>
+    <script src="public/js/mapa.js"></script>
 </body>
 
 </html>

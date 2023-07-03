@@ -8,11 +8,13 @@
 /**
  * Description of Clients
  */
-class Cliente extends Controller {
+class Cliente extends Controller
+{
     //put your code here
-    
+
     //Método padrão do controlador
-    public function index() {
+    public function index()
+    {
         $data = [
             'title' => 'Cliente Home',
             'desc' => ''
