@@ -32,48 +32,48 @@
                         <div class="col-md-5">
                             <select id="tipoCliente" class="form-select" required>
                                 <option value="" selected disabled>Selecione o tipo de utilizador</option>
-                                <option>Cliente</option>
-                                <option>Motorista</option>
+                                <option value="Cliente">Cliente</option>
+                                <option value="Motorista">Motorista</option>
                             </select>
                         </div>
                     </div>
                 </div>
-                <form class="row g-3" method="post">
+                <form class="row g-3" method="post" action="<?= URL . 'utilizador/cadastro'; ?>">
                     <div class="col-md-6">
                         <label for="nomeCompleto" class="form-label">Nome Completo</label>
-                        <input type="text" class="form-control" id="nomeCompleto" required>
+                        <input type="text" name="nome" class="form-control" id="nomeCompleto" required>
                     </div>
                     <div class="col-md-6">
                         <label for="inputEmail4" class="form-label">Email</label>
-                        <input type="email" class="form-control" id="inputEmail4" required>
+                        <input type="email" name="email" class="form-control" id="inputEmail4" required>
                     </div>
                     <div class="col-md-6">
                         <label for="tipoMotorista" class="form-label">Tipo</label>
-                        <select id="tipoMotorista" class="form-select" required>
+                        <select id="tipoMotorista" name="tipoMotorista" class="form-select" required>
                             <option value="" selected disabled>Selecione o tipo de motorista</option>
-                            <option>Empresa</option>
-                            <option>Particular</option>
+                            <option value="Empresa">Empresa</option>
+                            <option value="Particular">Particular</option>
                         </select>
                     </div>
                     <div class="col-md-6">
                         <label for="nomeEmpresa" class="form-label">Nome empresa</label>
-                        <input type="email" class="form-control" id="nomeEmpresa" required>
+                        <input type="text" name="nomeEmpresa" class="form-control" id="nomeEmpresa" required>
                     </div>
                     <div class="col-12">
                         <label for="morada" class="form-label">Morada</label>
-                        <input type="text" class="form-control" id="morada" required>
+                        <input type="text" name="morada" class="form-control" id="morada" required>
                     </div>
                     <div class="col-md-12">
                         <label for="inputData" class="form-label">Data de nascimento</label>
-                        <input type="date" class="form-control" id="inputData" required>
+                        <input type="date" name="data" class="form-control" id="inputData" required>
                     </div>
                     <div class="col-md-6">
                         <label for="password" class="form-label">Palavra-passe</label>
-                        <input type="password" class="form-control" id="password" required>
+                        <input type="password" name="password" class="form-control" id="password" required>
                     </div>
                     <div class="col-md-6">
                         <label for="confPassword" class="form-label">Confirmar palavra-passe</label>
-                        <input type="password" class="form-control" id="confPassword" required>
+                        <input type="password" name="confPassword" class="form-control" id="confPassword" required>
                     </div>
                     <div class="col-12">
                         <button type="submit" class="btn btn-primary">CADASTRAR</button>
