@@ -24,21 +24,21 @@
         <div class="corpo">
             <div class="conteudo-sign">
                 <div class="cabecalho-form">
-                    <a href="<?= URL . 'paginas/'?>"><img src="<?= URL . 'public/img/logo/LOGO-UTEC-AMARELO-PNG.png' ?>" alt=""></a>
-                    <div class="row g-3">
-                        <div class="col-md-7">
-                            <span>REGISTE-SE COMO CLIENTE</span>
-                        </div>
-                        <div class="col-md-5">
-                            <select id="tipoCliente" class="form-select" required>
-                                <option value="" selected disabled>Selecione o tipo de utilizador</option>
-                                <option value="Cliente">Cliente</option>
-                                <option value="Motorista">Motorista</option>
-                            </select>
-                        </div>
-                    </div>
+                    <a href="<?= URL . 'paginas/' ?>"><img
+                            src="<?= URL . 'public/img/logo/LOGO-UTEC-AMARELO-PNG.png' ?>" alt=""></a>
+                    <span>FAÇA O SEU REGISTO</span>
                 </div>
                 <form class="row g-3" method="post" action="<?= URL . 'utilizador/cadastro'; ?>">
+                    <div class="col-md-6">
+                        <span>REGISTE-SE COMO:</span>
+                    </div>
+                    <div class="col-md-6">
+                        <select id="tipoCliente" class="form-select" required>
+                            <option value="" selected disabled>Selecione o tipo de utilizador</option>
+                            <option value="Cliente">Cliente</option>
+                            <option value="Motorista">Motorista</option>
+                        </select>
+                    </div>
                     <div class="col-md-6">
                         <label for="nomeCompleto" class="form-label">Nome Completo</label>
                         <input type="text" name="nome" class="form-control" id="nomeCompleto" required>
@@ -49,7 +49,7 @@
                     </div>
                     <div class="col-md-6">
                         <label for="tipoMotorista" class="form-label">Tipo</label>
-                        <select id="tipoMotorista" name="tipoMotorista" class="form-select" required>
+                        <select id="tipoMotorista" name="tipoMotorista" class="form-select" disabled required>
                             <option value="" selected disabled>Selecione o tipo de motorista</option>
                             <option value="Empresa">Empresa</option>
                             <option value="Particular">Particular</option>
@@ -57,7 +57,7 @@
                     </div>
                     <div class="col-md-6">
                         <label for="nomeEmpresa" class="form-label">Nome empresa</label>
-                        <input type="text" name="nomeEmpresa" class="form-control" id="nomeEmpresa" required>
+                        <input type="text" name="nomeEmpresa" class="form-control" id="nomeEmpresa" disabled required>
                     </div>
                     <div class="col-12">
                         <label for="morada" class="form-label">Morada</label>
@@ -78,10 +78,12 @@
                     <div class="col-12">
                         <button type="submit" class="btn btn-primary">CADASTRAR</button>
                     </div>
-                    <span>Já possui uma conta? Entre <a href="<?= URL . 'paginas/login' ?>">aqui</a>.</span>
+                    <span>Já possui uma conta? Entre <a class="aqui" href="<?= URL . 'paginas/login' ?>">aqui</a>.</span>
                 </form>
             </div>
         </div>
     </div>
+
+    <script src="<?= URL . 'public/js/sign-up.js' ?>"></script>
 
     <?php include_once 'footer.php'; ?>
