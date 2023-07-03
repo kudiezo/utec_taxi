@@ -40,7 +40,7 @@
                     <div class="col-12">
                         <button type="submit" class="btn btn-primary">ENTRAR</button>
                     </div>
-                    <span>Ainda não possui uma conta? Crie <a href="<?= URL . 'paginas/signup' ?>">aqui</a>.</span>
+                    <span>Ainda não possui uma conta? Crie <a class="aqui" href="<?= URL . 'paginas/signup' ?>">aqui</a>.</span>
                 </form>
             </div>
         </div>

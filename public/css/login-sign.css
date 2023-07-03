@@ -2,6 +2,10 @@
     margin: 50px;
 }
 
+.conteudo-sign {
+    margin: 0px 40px 40px 40px;
+}
+
 .cabecalho-form {
     display: flex;
     justify-content: center;
@@ -22,7 +26,7 @@
     border-radius: 20px;
     margin: 0 auto;
     padding: 40px;
-    width: 400px;
+    width: 450px;
 }
 
 .conteudo-sign form {
@@ -31,4 +35,35 @@
     margin: 0 auto;
     padding: 40px;
     width: 600px;
+}
+
+.conteudo-login form button {
+    background-color: #ffc500;
+    border: none;
+}
+
+.conteudo-login form button:hover {
+    background-color: #ce9e00;
+}
+
+.conteudo-sign form button {
+    background-color: #ffc500;
+    border: none;
+}
+
+.conteudo-sign form button {
+    background-color: #ce9e00;
+}
+
+.separador {
+    height: 40px;
+}
+
+.aqui {
+    text-decoration: none;
+    color: #ffc500;
+}
+
+.aqui:hover {
+    color: #ce9e00;
 }
