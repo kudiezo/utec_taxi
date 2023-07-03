@@ -5,10 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="../../../public/css/bem-vindo.css">
-    <link rel="stylesheet" href="../../../public/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../../../public/fontawesome/css/all.min.css">
-    <link rel="stylesheet" href="../../../public/fontawesome/css/fontawesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="public/css/bem-vindo.css">
+    <link rel="stylesheet" href="public/css/bootstrap.min.css">
+    <link rel="stylesheet" href="public/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="public/fontawesome/css/fontawesome.min.css">
     <title>Bem-vindo</title>
 </head>
 
@@ -17,7 +21,7 @@
         <header>
             <div class="logo">
                 <a href="">
-                    <img src="../../../public/img/logo/LOGO-UTEC-AMARELO-PNG.png" alt="">
+                    <img src="public/img/logo/LOGO-UTEC-AMARELO-PNG.png" alt="">
                 </a>
             </div>
             <!-- <div class="slogan-utec">
@@ -41,7 +45,7 @@
             <div class="quem-somos">
                 <div class="row g-3">
                     <div class="logo-quem-somos col-md-4">
-                        <img src="../../../public/img/logo/LOGO-UTEC PRETO PNG.png" alt="">
+                        <img src="public/img/logo/LOGO-UTEC PRETO PNG.png" alt="">
                     </div>
                     <div class="descricao-quem-somos col-md-8">
                         <h2>O MELHOR SERVIÇO DE TÁXI DA BANDA</h2>

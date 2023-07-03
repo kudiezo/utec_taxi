@@ -17,7 +17,7 @@ class Paginas extends Controller {
             'title' => 'Home',
             'desc' => ''
         ];
-        $this->view('paginas/home', $data);
+        $this->view('paginas/bem-vindo', $data);
     }
     
     public function sobre() {
