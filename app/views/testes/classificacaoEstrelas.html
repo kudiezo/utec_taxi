@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <title>Classificação com Estrelas</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        .rating {
+            text-align: center;
+            cursor: default;
+        }
+
+        .rating>span {
+            display: inline-block;
+            position: relative;
+            width: 1.1em;
+        }
+
+        .filled-stars, .filled-hovered-stars {
+            color: orange;
+        }
+
+    </style>
+</head>
+
+<body>
+    <h2>Classificação com Estrelas</h2>
+    <div class="rating">
+        <span class=""><i class="fas fa-star"></i></span>
+        <span class=""><i class="fas fa-star"></i></span>
+        <span class=""><i class="fas fa-star"></i></span>
+        <span class=""><i class="fas fa-star"></i></span>
+        <span class=""><i class="fas fa-star"></i></span>
+    </div>
+    <p id="rating-value"></p>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const stars = document.querySelectorAll('.rating > span');
+            const ratingValue = document.getElementById('rating-value');
+
+            stars.forEach(function (star, index) {
+                star.addEventListener('click', function () {
+                    // Preenche todas as estrelas até a estrela clicada
+                    for (let i = 0; i <= index; i++) {
+                        stars[i].classList.add('filled-stars');
+                    }
+                    
+                    // Remove o preenchimento das estrelas após a estrela clicada
+                    for (let i = index + 1; i < stars.length; i++) {
+                        stars[i].classList.remove('filled-stars');
+                    }
+
+                    // Exibe e guarda o valor selecionado no clique
+                    ratingValue.textContent = index + 1;
+                });
+
+                star.addEventListener('mouseover', function () {
+                    // Aplica o efeito de hover em todas as estrelas anteriores à estrela atual
+                    for (let i = 0; i <= index; i++) {
+                        stars[i].classList.add('filled-hovered-stars');
+                    }
+                    for( let i = index + 1; i <= stars.length; i++ ){
+                        //remove todas as estrelas marcadas na frente da estrela hovered                        
+                        stars[i].classList.remove('filled-stars');
+                    }
+                });
+
+                star.addEventListener('mouseout', function () {
+                    // Remove o efeito de hover de todas as estrelas
+                    for(let i = 0; i < stars.length; i++){
+                        stars[i].classList.remove('filled-hovered-stars');
+                    }
+
+                    //Devolve as estrelas marcadas com o clique (que foram removidas durante o mouseover)
+                    for(let i = 0; i < ratingValue.textContent; i++){
+                        stars[i].classList.add('filled-stars');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
