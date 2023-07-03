@@ -75,6 +75,10 @@ tipo_escolha.addEventListener("change", () => {
 
       break;
     case "2":
+      positions.forEach((position) => {
+        if (position.querySelector(".fa-car-side"))
+          position.querySelector(".fa-car-side").style.color = "white";
+      });
       break;
     default:
   }
