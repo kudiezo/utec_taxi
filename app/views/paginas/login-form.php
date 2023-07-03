@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="<?= URL . 'public/css/bootstrap.min.css' ?>">
     <link rel="stylesheet" href="<?= URL . 'public/fontawesome/css/all.min.css' ?>">
     <link rel="stylesheet" href="<?= URL . 'public/fontawesome/css/fontawesome.min.css' ?>">
-    <title>Bem-vindo</title>
+    <title>Login</title>
 </head>
 
 <body>
@@ -40,19 +40,10 @@
                     <div class="col-12">
                         <button type="submit" class="btn btn-primary">ENTRAR</button>
                     </div>
+                    <span>Ainda não possui uma conta? Crie <a href="<?= URL . 'paginas/signup' ?>">aqui</a>.</span>
                 </form>
             </div>
         </div>
     </div>
 
-    <footer>
-        <span>@ UTEC 2023. TODOS OS DIREITOS RESERVADOS.</span>
-        <div class="icons-social-media">
-            <a href=""><i class="fa-brands fa-facebook"></i></a>
-            <a href=""><i class="fa-brands fa-twitter"></i></a>
-            <a href=""><i class="fa-brands fa-instagram"></i></a>
-        </div>
-    </footer>
-</body>
-
-</html>
+    <?php include_once 'footer.php'; ?>
