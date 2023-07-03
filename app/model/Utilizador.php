@@ -5,17 +5,19 @@ abstract class Utilizador{
     protected $email;
     protected $senha;
     protected $morada;
-    protected $perfil;
+    protected $tipoVeiculo;
     protected $dataNasc;
+    protected $empresa;
 
-    public function __construct($id, $nome, $email, $senha, $dataNasc, $morada, $perfil) {
+    public function __construct($id, $nome, $email, $senha, $dataNasc, $morada, $tipoVeiculo, $empresa) {
         $this->id = $id;
         $this->nome = $nome;
         $this->email = $email;
         $this->senha = $senha;
         $this->dataNasc = $dataNasc;
         $this->morada = $morada;
-        $this->perfil = $perfil;
+        $this->tipoVeiculo = $tipoVeiculo;
+        $this->empresa = $empresa;
     }
     
     //abstract public function verificarLogin($email, $username, $password);
@@ -44,10 +46,14 @@ abstract class Utilizador{
         return $this->morada;
     }
 
-    function getPerfil() {
-        return $this->perfil;
+    function getTipoVeiculo() {
+        return $this->tipoVeiculo;
     }
-
+    
+    public function getEmpresa() {
+        return $this->empresa;
+    }
+    
     public function setEmail($email): void {
         $this->email = $email;
     }
@@ -68,7 +74,11 @@ abstract class Utilizador{
         $this->morada = $morada;
     }
 
-    function setPerfil($perfil): void {
-        $this->perfil = $perfil;
+    function setTipoVeiculo($perfil): void {
+        $this->tipoVeiculo = $perfil;
+    }
+    
+    public function setEmpresa($empresa): void {
+        $this->empresa = $empresa;
     }
 }
