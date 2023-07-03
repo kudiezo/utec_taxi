@@ -38,7 +38,7 @@
             <div class="login-icon-link">
                 <a href="<?= URL . 'paginas/login' ?>">
                     <i class="fa-solid fa-user"></i>
-                    <span>LOGIN</span>
+                    <span>ENTRAR | REGISTRAR</span>
                 </a>
             </div>
         </header>
