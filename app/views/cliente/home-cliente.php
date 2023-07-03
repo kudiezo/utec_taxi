@@ -99,18 +99,25 @@
                         </tr>
                     </thead>
                     <tbody>
+                        <?php 
+                            require_once '../../controllers/Clientes.php';
+                            $cliente = new Clientes();
+                            $res = $cliente->getHistoricoViagem($_['infoUser']->email);
+                            foreach ($res as $linha) {
+                        ?>
                         <tr>
                             <th id="viagemID" scope="row">1</th>
-                            <td id="motorista">Don Toretto</td>
+                            <td id="motorista"><?= $linha->email_motorista ?></td>
                             <td id="viatura">LD-45-12</td>
-                            <td id="origem">Talatona</td>
-                            <td id="destino">Caxito</td>
+                            <td id="origem"><?= $linha->coordenadas_origem ?></td>
+                            <td id="destino"><?= $linha->coordenadas_destino ?></td>
                             <td id="distancia">5 KM</td>
-                            <td id="inicio">12:37:23</td>
-                            <td id="fim">16:12:45</td>
+                            <td id="inicio"><?= $linha->data_hora_ini ?></td>
+                            <td id="fim"><?= $linha->data_hora_fim ?></td>
                             <td id="duracao">4 horas</td>
-                            <td id="quantia">13.657,99 kz</td>
+                            <td id="quantia"><?= $linha->custo_real ?></td>
                         </tr>
+                        <?php } ?>
                     </tbody>
                 </table>
             </div>

@@ -73,4 +73,11 @@ class Motoristas extends Controller {
         }
         
     }
+    
+    public function getHistoricoViagem($email) {
+        $resultado = $this->motoristaServices->getHistoricoViagem($email);
+        if($resultado != false) {
+            return $resultado;
+        }
+    }
 }

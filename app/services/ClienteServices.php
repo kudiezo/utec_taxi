@@ -23,4 +23,26 @@ class ClienteServices {
         $resultado = $this->clienteRepository->insert($cliente);
         return $resultado;
     }
+    
+    public function addViagem($emailCliente, $emailMotorista, $horaIni, $horaFim, $coorOrigem, 
+            $cordDest, $custoEstimado, $custoReal, $classificacaoMotorista) {
+        
+        $sqlScript = "INSERT INTO viagem VALUES (default, '$emailCliente', '$emailMotorista', "
+                . "'$horaIni', '$horaFim', '$coorOrigem', '$cordDest', '$custoEstimado', "
+                . "'$custoReal', '$classificacaoMotorista');";
+        
+        $result = $this->clienteRepository->insertCustom($sqlScript);
+        if($result != false) {
+            return $result;
+        }
+    }
+    
+    public function getHistoricoViagem($email) {
+        $sqlScript = "SELECT * FROM viagem WHERE email_cliente '$email';";
+        
+        $result = $this->clienteRepository->selectMulti($sqlScript);
+        if($result != false) {
+            return $result;
+        }
+    }
 }

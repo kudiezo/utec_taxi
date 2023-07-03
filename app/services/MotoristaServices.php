@@ -27,4 +27,13 @@ class MotoristaServices {
         $resultado = $this->motoristaRepository->insert($sqlScript);
         return $resultado;
     }
+    
+    public function getHistoricoViagem($email) {
+        $sqlScript = "SELECT * FROM viagem WHERE email_motorista '$email';";
+        
+        $result = $this->motoristaRepository->selectMulti($sqlScript);
+        if($result != false) {
+            return $result;
+        }
+    }
 }

@@ -30,6 +30,21 @@ class ClienteRepository extends ConexaoPDO {
             return FALSE;
         }
     }
+    
+    public function insertCustom($sqlScript) {
+        $this->setSql($sqlScript);
+        $stmt = $this->prepare($this->getSql());
+        try {
+            $stmt->execute();
+            $stmt->closeCursor();
+            parent::__destruct();
+            return true;
+        } catch (Exception $ex) {
+            $this->setErro($ex->getMessage());
+            parent::__destruct();
+            return FALSE;
+        }
+    }
 
     public function delete() {
      

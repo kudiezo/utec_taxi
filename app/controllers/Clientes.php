@@ -60,4 +60,23 @@ class Clientes extends Controller {
         }
         
     }
+    
+    public function addViagem($emailCliente, $emailMotorista, $horaIni, $horaFim, $coorOrigem, 
+            $cordDest, $custoEstimado, $custoReal, $classificacaoMotorista) {
+            
+            $resultado = $this->clienteServices->addViagem($emailCliente, $emailMotorista, $horaIni, 
+                    $horaFim, $coorOrigem, $cordDest, $custoEstimado, $custoReal, $classificacaoMotorista);
+            
+            if($resultado != false) {
+                return $resultado;
+            }
+        
+    }
+    
+    public function getHistoricoViagem($email) {
+        $resultado = $this->clienteServices->getHistoricoViagem($email);
+        if($resultado != false) {
+            return $resultado;
+        }
+    }
 }
