@@ -1,0 +1,159 @@
+.conteudo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sidebar {
+    background-color: #1b2a46;
+    color: #fff;
+    padding: 10px;
+    width: 350px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.logo-sidebar {
+    width: 100%;
+    text-align: center;
+}
+
+.logo-sidebar img {
+    width: 100px;
+    height: 100px;
+
+}
+
+.topo-sidebar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.topo-sidebar a {
+    padding: 5px;
+    width: 100%;
+    border-radius: 10px;
+    display: flex;
+    color: #fff;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+
+}
+
+.topo-sidebar a:hover {
+    color: #ffc500;
+    font-weight: bold;
+    transition: font-weight 0.1s;
+    box-shadow: 0px 0px 4px 1px #ffc500;
+}
+
+.fundo-sidebar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    margin-top: auto;
+    margin-bottom: 20px;
+}
+
+.fundo-sidebar:hover {
+    box-shadow: 0px 0px 4px 1px #ffc500;
+    border-radius: 20px;
+}
+
+.fundo-sidebar i {
+    margin-right: 10px;
+}
+
+.corpo {
+    width: 100%;
+    height: 100vh;
+    padding: 20px;
+    overflow: auto;
+    background-color: #dbe8ff;
+    /* background: #ccc url(luanda-city.jpeg) no-repeat 100% 0px;
+    background-size: cover;
+    background-attachment: fixed; */
+}
+
+.conteudo-corpo {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 50px;
+    height: 100%;
+    overflow: auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.location-destino {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-size: 1.3rem;
+    color: #1b2a46;
+    font-weight: 500;
+}
+
+.mapa {
+    border: 1px solid #ffc500;
+    
+}
+
+.mapa td {
+    background-color: #1b2a46;
+    border: 3px solid #fff;
+    color: #fff;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+}
+
+.mapa td:hover {
+    background-color: #ffc500;
+}
+
+.opcoes {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.opcoes div {
+    color: #1b2a46;
+    margin: 10px;
+    padding: 5px;
+    border: 1px solid #ffc500;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.opcoes div button {
+    color: #1b2a46;
+    background-color: #ffc500;
+    border: none;
+    font-weight: bold;
+}
+
+.opcoes div button:hover {
+    background-color: #ad8500;
+}
+
+.chamar-carro button {
+    color: #1b2a46;
+    background-color: #ffc500;
+    border: none;
+    font-weight: bold;
+}
+
+.chamar-carro button:hover {
+    background-color: #ad8500;
+}

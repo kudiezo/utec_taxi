@@ -49,6 +49,22 @@ class Paginas extends Controller {
             'title' => 'Boas-Vindas',
             'desc' => ''
         ];
-        $this->view('testes/bem-vindo', $data);
+        $this->view('paginas/bem-vindo', $data);
+    }
+
+    public function login() {
+        $data = [
+            'title' => 'Login',
+            'desc' => ''
+        ];
+        $this->view('paginas/login-form', $data);
+    }
+
+    public function signup() {
+        $data = [
+            'title' => 'Sign Up',
+            'desc' => ''
+        ];
+        $this->view('paginas/sign-up', $data);
     }
 }

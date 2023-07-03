@@ -31,13 +31,13 @@ class Route {
         $url = $this->url();
         
         //Verificar existência do controlador
-        if(file_exists('../controllers/'.ucfirst($url[0]).".php")) {
+        if(file_exists(APP_DIR . '/controllers/'.ucfirst($url[0]).".php")) {
             $this->controller = ucfirst($url[0]);
             unset($url[0]);
         }
         
         //Pega a classe do controlador encontrado para poder instanciar
-        require_once './../app/controllers/'.$this->controller.'.php';
+        require_once APP_DIR . '/controllers/'.$this->controller.'.php';
         //Intancia o controlador
         $this->controller = new $this->controller;
         

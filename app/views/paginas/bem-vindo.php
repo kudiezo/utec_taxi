@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
 
 <head>
     <meta charset="UTF-8">
@@ -7,12 +7,14 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
 
-    <link rel="stylesheet" href="public/css/bem-vindo.css">
-    <link rel="stylesheet" href="public/css/bootstrap.min.css">
-    <link rel="stylesheet" href="public/fontawesome/css/all.min.css">
-    <link rel="stylesheet" href="public/fontawesome/css/fontawesome.min.css">
+    <link rel="stylesheet" href="<?= URL . 'public/css/bem-vindo.css' ?>">
+    <link rel="stylesheet" href="<?= URL . 'public/css/bootstrap.min.css' ?>">
+    <link rel="stylesheet" href="<?= URL . 'public/fontawesome/css/all.min.css' ?>">
+    <link rel="stylesheet" href="<?= URL . 'public/fontawesome/css/fontawesome.min.css' ?>">
     <title>Bem-vindo</title>
 </head>
 
@@ -20,8 +22,8 @@
     <div class="conteudo">
         <header>
             <div class="logo">
-                <a href="">
-                    <img src="public/img/logo/LOGO-UTEC-AMARELO-PNG.png" alt="">
+                <a href="#">
+                    <img src="<?= URL . 'public/img/logo/LOGO-UTEC-AMARELO-PNG.png' ?>" alt="">
                 </a>
             </div>
             <!-- <div class="slogan-utec">
@@ -34,7 +36,7 @@
                 </ul>
             </div>
             <div class="login-icon-link">
-                <a href="">
+                <a href="<?= URL . 'paginas/login' ?>">
                     <i class="fa-solid fa-user"></i>
                     <span>LOGIN</span>
                 </a>
@@ -45,7 +47,7 @@
             <div class="quem-somos">
                 <div class="row g-3">
                     <div class="logo-quem-somos col-md-4">
-                        <img src="public/img/logo/LOGO-UTEC PRETO PNG.png" alt="">
+                        <img src="<?= URL . 'public/img/logo/LOGO-UTEC PRETO PNG.png' ?>" alt="">
                     </div>
                     <div class="descricao-quem-somos col-md-8">
                         <h2>O MELHOR SERVIÇO DE TÁXI DA BANDA</h2>
