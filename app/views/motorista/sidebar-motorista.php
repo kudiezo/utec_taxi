@@ -29,13 +29,18 @@
             </div>
             <hr>
             <div class="topo-sidebar">
-                <a href="">MINHA CLASSIFICAÇÃO</a>
-                <a href="">HISTÓRICO DE VIAGEM</a>
-                <a href="">TOTAL DE KM PERCORRIDOS</a>
+                <a href="" data-bs-toggle="modal" data-bs-target="#minhaClassificacao"
+                    data-bs-whatever="idClassificacao">MINHA CLASSIFICAÇÃO</a>
+                <a href="" data-bs-toggle="modal" data-bs-target="#historicoViagem" data-bs-whatever="idViagem">
+                    HISTÓRICO DE VIAGEM</a>
+                <a href="" data-bs-toggle="modal" data-bs-target="#kmPercorridos" data-bs-whatever="idKm">
+                    TOTAL DE KM PERCORRIDOS</a>
             </div>
             <div class="fundo-sidebar">
                 <div class="dropdown">
-                    <i class="fa-solid fa-user"></i><span><?= $_SESSION['infoUser']->nome ;?></span>
+                    <i class="fa-solid fa-user"></i><span>
+                        <?= $_SESSION['infoUser']->nome; ?>
+                    </span>
                     <ul>
                         <li><a href="<?= URL . 'utilizador/logout'; ?>">Sair</a></li>
                     </ul>

@@ -144,7 +144,7 @@
 
 .mapa {
     border: 1px solid #ffc500;
-    
+
 }
 
 .mapa td {
@@ -204,6 +204,34 @@
     background-color: #ad8500;
 }
 
-.modal-dialog div .modal-content {
-    width: 900px;
+.estrelas {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.rating {
+    text-align: center;
+    cursor: default;
+}
+
+.rating>span {
+    display: inline-block;
+    position: relative;
+    width: 1.1em;
+}
+
+.filled-stars,
+.filled-hovered-stars {
+    color: orange;
+}
+
+.kilomPercorridos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffc500;
+    font-size: 2.8rem;
+    font-weight: bold;
 }
