@@ -296,34 +296,4 @@ const getTime = (v) => {
   console.log("Tempo: " + tempo);
 };
 
-const getTimeK = (v) => {
-  let coordAux = [];
-  let distCarro = 0;
-  let distDest = 0;
-
-  getAllCoords(TableMat()).map((coord) => {
-    if (coord.id === 1 || coord.id === 7) {
-      coordAux.push(coord);
-    }
-  });
-
-  distCarro = calcularDistanciaEuclidiana(coordAux[0], coordAux[1]);
-
-  console.log(coordAux);
-  console.log("Distancia do cliente para o carro: " + distCarro);
-  coordAux = [];
-
-  getAllCoords(TableMat()).map((coord) => {
-    if (coord.id === 1 || coord.id === 8) {
-      coordAux.push(coord);
-    }
-  });
-
-  console.log(coordAux);
-  distDest = calcularDistanciaEuclidiana(coordAux[0], coordAux[1]);
-  console.log("Distancia do cliente para o destino: " + distDest);
-  var distTotal = distCarro + distDest;
-
-  var tempo = (distCarro + distDest) / v;
-  console.log("Tempo: " + tempo);
-};
+const getTimeJ = (v) => {};
