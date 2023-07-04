@@ -29,13 +29,16 @@
             </div>
             <hr>
             <div class="topo-sidebar">
-                <a href="">MÉTODO DE PAGAMENTO</a>
-                <a href="">MEU ENDEREÇO</a>
-                <a href="">HISTÓRICO DE VIAGEM</a>
+                <!-- <a href="">MÉTODO DE PAGAMENTO</a> -->
+                <!-- <a href="">MEU ENDEREÇO</a> -->
+                <a href="" data-bs-toggle="modal" data-bs-target="#historicoViagem" data-bs-whatever="idViagem">
+                    HISTÓRICO DE VIAGEM</a>
             </div>
             <div class="fundo-sidebar">
                 <div class="dropdown">
-                    <i class="fa-solid fa-user"></i><span><?= $_SESSION['infoUser']->nome ;?></span>
+                    <i class="fa-solid fa-user"></i><span>
+                        <?= $_SESSION['infoUser']->nome; ?>
+                    </span>
                     <ul>
                         <li><a href="<?= URL . 'utilizador/logout'; ?>">Sair</a></li>
                     </ul>

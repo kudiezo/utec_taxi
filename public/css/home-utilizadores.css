@@ -189,6 +189,10 @@
     background-color: #ad8500;
 }
 
+.herdou-opcoes {
+    margin-top: 0px;
+}
+
 .chamar-carro button {
     color: #1b2a46;
     background-color: #ffc500;
@@ -198,4 +202,8 @@
 
 .chamar-carro button:hover {
     background-color: #ad8500;
+}
+
+.modal-dialog div .modal-content {
+    width: 900px;
 }
