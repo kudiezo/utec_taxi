@@ -9,34 +9,13 @@
 
 
         <table class="mapa">
-            <?php for ($i = -1; $i < 15; $i++) { ?>
-                <tr>
-                    <?php for ($j = -1; $j < 15; $j++) { ?>
-                        <?php if ($i === -1 || $j === -1) { ?>
-                            <td style="background-color: #ffc500;">
-                                <?php if ($i === -1) if ($j === -1)
-                                    print('x/y');
-                                else
-                                    print($j);
-                                else
-                                    print($i); ?>
-                            </td>
-                        <?php } else { ?>
-                            <td>
-                                <?php if ($i === 12 && $j === 8) { ?> <i class="fa-solid fa-car-side"></i>
-                                <?php } ?>
-                                <?php if ($i === 1 && $j === 5) { ?> <i class="fa-solid fa-car-side"></i>
-                                <?php } ?>
-                                <?php if ($i === 8 && $j === 3) { ?> <i class="fa-solid fa-motorcycle"></i>
-                                <?php } ?>
-                                <?php if ($i === 3 && $j === 13) { ?> <i class="fa-solid fa-person"></i>
-                                <?php } ?>
-                            </td>
-                        <?php } ?>
-
-
-                    <?php } ?>
-                </tr>
+            <?php for ($i = 0; $i < 15; $i++) { ?>
+            <tr class="tr <?php echo "l" . $i ?>">
+                <?php for ($j = 0; $j < 15; $j++) { ?>
+                <td class="td <?php echo "c" . $j ?>" id="<?php echo "x" . $i . " " . "y" . $j ?>">
+                </td>
+                <?php } ?>
+            </tr>
             <?php } ?>
         </table>
 
@@ -44,14 +23,15 @@
             <div class="escolher-carro">
                 <span>FAÇA A SUA ESCOLHA:</span>
                 <select id="tipo-escolha" class="form-select" required>
-                    <option value="" selected disabled>...</option>
+                    <option value="0">Selecione Sua Posição</option>
                     <option value="1">Táxi mais próximo</option>
                     <option value="2">Selecionar táxi específico</option>
+                    <option value="3">Selecionar destino</option>
                 </select>
             </div>
             <div class="tempo-estimado">
                 <span>SUA VIAGEM DURARÁ:</span>
-                <button class="btn btn-primary">00:00:00</button>
+                <button class="btn btn-primary" id="tempo">00:00:00</button>
             </div>
             <div class="preco-pagar">
                 <span>QUANTIA A PAGAR:</span>
@@ -61,15 +41,15 @@
         <div class="opcoes herdou-opcoes">
             <div class="tempo-estimado">
                 <span>DISTÂNCIA MOTORISTA-CLIENTE:</span>
-                <button class="btn btn-primary">0 KM</button>
+                <button class="btn btn-primary" id="dmc">0 KM</button>
             </div>
             <div class="preco-pagar">
-                <span>DISTÂNCIA MOTORISTA-CLIENTE:</span>
-                <button class="btn btn-primary">0 KM</button>
+                <span>DISTÂNCIA CLIENTE-DESTINO:</span>
+                <button class="btn btn-primary" id="dcd">0 KM</button>
             </div>
         </div>
         <div class="chamar-carro d-grid gap-2 col-6 mx-auto">
-            <button class="btn btn-primary" type="button">CHAMAR CARRO</button>
+            <button class="btn btn-primary" type="button" onclick="getTime(2)">CHAMAR CARRO</button>
         </div>
     </div>
 </div>
@@ -123,6 +103,7 @@
 
 <script src="<?= URL . 'public/js/bootstrap.bundle.min.js' ?>"></script>
 <script src="<?= URL . 'public/js/home-cliente.js' ?>"></script>
+<script src="<?= URL . 'public/js/mapa.js' ?>"></script>
 </body>
 
 </html>
