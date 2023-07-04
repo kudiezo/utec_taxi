@@ -32,12 +32,12 @@
 
                 <table class="mapa">
                     <?php for ($i = 0; $i < 15; $i++) { ?>
-                    <tr class="tr <?php echo "l" . $i ?>">
-                        <?php for ($j = 0; $j < 15; $j++) { ?>
-                        <td class="td <?php echo "c" . $j ?>" id="<?php echo "x" . $i . " " . "y" . $j ?>">
-                        </td>
-                        <?php } ?>
-                    </tr>
+                        <tr class="tr <?php echo "l" . $i ?>">
+                            <?php for ($j = 0; $j < 15; $j++) { ?>
+                                <td class="td <?php echo "c" . $j ?>" id="<?php echo "x" . $i . " " . "y" . $j ?>">
+                                </td>
+                            <?php } ?>
+                        </tr>
                     <?php } ?>
                 </table>
                 <div class="opcoes">
@@ -47,6 +47,7 @@
                             <option value="0">Selecione Sua Posição</option>
                             <option value="1">Táxi mais próximo</option>
                             <option value="2">Selecionar táxi específico</option>
+                            <option value="3">Selecionar destino</option>
                         </select>
                     </div>
                     <div class="tempo-estimado">
@@ -59,7 +60,7 @@
                     </div>
                 </div>
                 <div class="chamar-carro d-grid gap-2 col-6 mx-auto">
-                    <button class="btn btn-primary" type="button">CHAMAR CARRO</button>
+                    <button class="btn btn-primary" type="button" onclick="getTime(2)">CHAMAR CARRO</button>
                 </div>
             </div>
         </div>
