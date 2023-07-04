@@ -17,7 +17,9 @@ tipoClienteSelect.addEventListener('change', function() {
   } else {
     form_signup.setAttribute('action', 'http://localhost/utec_taxi/clientes/cadastro');
     tipoMotoristaSelect.disabled = true;
+    tipoVeiculoSelect.disabled = true;
     tipoMotoristaSelect.selectedIndex = 0; // Reinicia a seleção do campo "tipoMotorista"
+    tipoVeiculoSelect.selectedIndex = 0; // Reinicia a seleção do campo "tipoVeiculo"
   }
 });
 
