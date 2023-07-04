@@ -32,12 +32,12 @@
 
                 <table class="mapa">
                     <?php for ($i = 0; $i < 15; $i++) { ?>
-                        <tr class="tr <?php echo "l" . $i ?>">
-                            <?php for ($j = 0; $j < 15; $j++) { ?>
-                                <td class="td <?php echo "c" . $j ?>" id="<?php echo "x" . $i . " " . "y" . $j ?>">
-                                </td>
-                            <?php } ?>
-                        </tr>
+                    <tr class="tr <?php echo "l" . $i ?>">
+                        <?php for ($j = 0; $j < 15; $j++) { ?>
+                        <td class="td <?php echo "c" . $j ?>" id="<?php echo "x" . $i . " " . "y" . $j ?>">
+                        </td>
+                        <?php } ?>
+                    </tr>
                     <?php } ?>
                 </table>
                 <div class="opcoes">
@@ -56,7 +56,7 @@
                     </div>
                     <div class="preco-pagar">
                         <span>QUANTIA A PAGAR:</span>
-                        <button class="btn btn-primary">0.000,00 kz</button>
+                        <button class="btn btn-primary">0.0055550,00 kz</button>
                     </div>
                 </div>
                 <div class="chamar-carro d-grid gap-2 col-6 mx-auto">
