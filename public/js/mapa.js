@@ -20,21 +20,48 @@ while (a < 5) {
   // Atribui o valor veicula à posição da matriz
   pos.innerHTML = `<i class="fa-solid fa-car-side"></i>`;
 
-  //pos.querySelector(".fa-car-side").style.display = "none";
+  pos.querySelector(".fa-car-side").style.display = "none";
   a++;
 }
 
 //Set passageiro no mapa
 positions.forEach((position, index) => {
   position.addEventListener("click", () => {
-    position.innerHTML = `<i class="fa-solid fa-person"></i>`;
+    var pCoordsGet = "";
+    if (
+      position.querySelector("i") &&
+      (tipo_escolha.value === "1" || tipo_escolha.value === "2") &&
+      position.querySelector("i").className === "fa-solid fa-car-side"
+    ) {
+      pCoordsGet = position.id;
+      position.querySelector(".fa-car-side").style.color = "red";
+    } else if (tipo_escolha.value === "0") {
+      position.innerHTML = `<i class="fa-solid fa-person"></i>`;
+    }
+
+    var pCoords = [
+      Number(pCoordsGet.split(" ")[0].charAt(1)),
+      Number(pCoordsGet.split(" ")[1].charAt(1)),
+    ];
+
+    console.log(pCoords);
     positions.forEach((positionAux, indexAux) => {
       if (
         indexAux !== index &&
+        tipo_escolha.value === "0" &&
         positionAux.querySelector("i") &&
         positionAux.querySelector("i").className !== "fa-solid fa-car-side"
       ) {
         positionAux.innerHTML = "";
+      }
+
+      if (
+        indexAux !== index &&
+        (tipo_escolha.value === "1" || tipo_escolha.value === "2") &&
+        positionAux.querySelector("i") &&
+        positionAux.querySelector("i").className === "fa-solid fa-car-side"
+      ) {
+        positionAux.querySelector(".fa-car-side").style.color = "white";
       }
     });
     TableMat();
@@ -73,18 +100,16 @@ tipo_escolha.addEventListener("change", () => {
         )
         .querySelector(".fa-car-side").style.color = "red";
 
-      break;
-    case "2":
-      positions.forEach((position) => {
-        if (position.querySelector(".fa-car-side"))
-          position.querySelector(".fa-car-side").style.color = "white";
-      });
+      document
+        .querySelector(
+          `.l${veiculoMaisProximo.linha} .c${veiculoMaisProximo.coluna}`
+        )
+        .querySelector(".fa-car-side").style.display = "block";
+
       break;
     default:
   }
 });
-
-// Obtém a referência da tabela pelo ID
 
 // Obtém as linhas da tabela
 const TableMat = () => {
@@ -123,7 +148,6 @@ const TableMat = () => {
     matriz.push(linhaMatriz);
   }
 
-  console.log(matriz);
   return matriz;
 };
 // Encontra a posição "1" na matriz

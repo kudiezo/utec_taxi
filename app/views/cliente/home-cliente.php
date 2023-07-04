@@ -32,19 +32,19 @@
 
                 <table class="mapa">
                     <?php for ($i = 0; $i < 15; $i++) { ?>
-                        <tr class="tr <?php echo "l" . $i ?>">
-                            <?php for ($j = 0; $j < 15; $j++) { ?>
-                                <td class="td <?php echo "c" . $j ?>" id="<?php echo "x" . $i . " " . "y" . $j ?>">
-                                </td>
-                            <?php } ?>
-                        </tr>
+                    <tr class="tr <?php echo "l" . $i ?>">
+                        <?php for ($j = 0; $j < 15; $j++) { ?>
+                        <td class="td <?php echo "c" . $j ?>" id="<?php echo "x" . $i . " " . "y" . $j ?>">
+                        </td>
+                        <?php } ?>
+                    </tr>
                     <?php } ?>
                 </table>
                 <div class="opcoes">
                     <div class="escolher-carro">
                         <span>FAÇA A SUA ESCOLHA:</span>
                         <select id="tipo-escolha" class="form-select" required>
-                            <option value="" selected disabled>...</option>
+                            <option value="0">Selecione Sua Posição</option>
                             <option value="1">Táxi mais próximo</option>
                             <option value="2">Selecionar táxi específico</option>
                         </select>
