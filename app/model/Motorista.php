@@ -21,8 +21,8 @@ class Motorista extends Utilizador {
         $this->classificacao = $classificacao;
     }
 
-    public function __construct($id, $nome, $email, $senha, $dataNasc, $morada, $perfil, $disponivel, $classificacao) {
-        parent::__construct($id, $nome, $email, $senha, $dataNasc, $morada, $perfil);
+    public function __construct($id, $nome, $email, $senha, $dataNasc, $morada, $tipoVeiculo, $empresa, $disponivel, $classificacao) {
+        parent::__construct($id, $nome, $email, $senha, $dataNasc, $morada, $tipoVeiculo, $empresa);
         $this->disponivel = $disponivel;
         $this->classificacao = $classificacao;
     }

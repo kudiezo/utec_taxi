@@ -8,6 +8,8 @@
 /**
  * Description of Motorista
  */
+require_once APP_DIR . '/services/MotoristaServices.php';
+require_once APP_DIR . '/model/Motorista.php';
 class Motoristas extends Controller {
     //put your code here
     private $motoristaServices;
@@ -15,7 +17,7 @@ class Motoristas extends Controller {
 
     public function __construct() {
         $this->motoristaServices = new MotoristaServices();
-        $this->motoristaModel = new Motorista('', '', '', '', '', '', '', '', '');
+        $this->motoristaModel = new Motorista('', '', '', '', '', '', '', '', '', '');
     }
     
     //Método padrão do controlador

@@ -30,7 +30,7 @@
                             src="<?= URL . 'public/img/logo/LOGO-UTEC-AMARELO-PNG.png' ?>" alt=""></a>
                     <span>FAÇA O SEU REGISTO</span>
                 </div>
-                <form class="row g-3" method="post" action="<?= URL . 'clientes/cadastro'; ?>">
+                <form id="formulario-signup" class="row g-3" method="post" action="">
                     <div class="col-md-6">
                         <span>REGISTE-SE COMO:</span>
                     </div>
@@ -46,28 +46,34 @@
                         <input type="text" name="nome" class="form-control" id="nomeCompleto" required>
                     </div>
                     <div class="col-md-6">
-                        <label for="inputEmail4" class="form-label">Email</label>
-                        <input type="email" name="email" class="form-control" id="inputEmail4" required>
+                        <label for="inputData" class="form-label">Data de nascimento</label>
+                        <input type="date" name="dataNasc" class="form-control" id="inputData" required>
                     </div>
+                    
                     <div class="col-md-6">
-                        <label for="tipoMotorista" class="form-label">Tipo</label>
-                        <select id="tipoMotorista" name="tipoMotorista" class="form-select" disabled required>
-                            <option value="" selected disabled>Selecione o tipo de motorista</option>
-                            <option value="Empresa">Empresa</option>
-                            <option value="Particular">Particular</option>
+                        <label for="tipoVeiculo" class="form-label">Viatura</label>
+                        <select id="tipoVeiculo" name="tipoVeiculo" class="form-select" disabled required>
+                            <option value="" selected disabled>Selecione o seu tipo de viatura</option>
+                            <option value="1">Ligeiro</option>
+                            <option value="2">Carrinha</option>
+                            <option value="3">Moto</option>
                         </select>
                     </div>
                     <div class="col-md-6">
-                        <label for="nomeEmpresa" class="form-label">Nome empresa</label>
-                        <input type="text" name="nomeEmpresa" class="form-control" id="nomeEmpresa" disabled required>
+                        <label for="tipoMotorista" class="form-label">Tipo de Motorista</label>
+                        <select id="tipoMotorista" name="tipoMotorista" class="form-select" disabled required>
+                            <option value="" selected disabled>Selecione o tipo de motorista</option>
+                            <option value="1">Particular</option>
+                            <option value="2">Empresa</option>
+                        </select>
                     </div>
                     <div class="col-12">
                         <label for="morada" class="form-label">Morada</label>
                         <input type="text" name="morada" class="form-control" id="morada" required>
                     </div>
                     <div class="col-md-12">
-                        <label for="inputData" class="form-label">Data de nascimento</label>
-                        <input type="date" name="dataNasc" class="form-control" id="inputData" required>
+                        <label for="inputEmail4" class="form-label">Email</label>
+                        <input type="email" name="email" class="form-control" id="inputEmail4" required>
                     </div>
                     <div class="col-md-6">
                         <label for="password" class="form-label">Palavra-passe</label>

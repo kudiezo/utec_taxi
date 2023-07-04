@@ -10,6 +10,8 @@
  *
  * @author kudiezo.jr
  */
+require_once APP_DIR . '/repositories/MotoristaRepository.php';
+//require_once APP_DIR . '/model/Motorista.php';
 class MotoristaServices {
     //put your code here 
     private $motoristaRepository;
