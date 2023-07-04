@@ -23,6 +23,7 @@ class ClienteRepository extends ConexaoPDO {
             $stmt->execute();
             $stmt->closeCursor();
             parent::__destruct();
+            return true;
         } catch (Exception $ex) {
             $this->setErro($ex->getMessage());
             parent::__destruct();

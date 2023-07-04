@@ -31,14 +31,14 @@ class Utilizador extends Controller {
             session_name("Taxis_UTEC");
             session_start();
             $_SESSION['infoUser'] = $resClienteLogin;
-            $_SESSION['tipoUtilizador'] = 'cliente'; //depois mudar isso para "clientes" para corresponder às alterações do Kudiezo
+            $_SESSION['tipoUtilizador'] = 'clientes';
             $this->view('cliente/home-cliente', []);
         } 
         elseif($resMotoristaLogin != false) {
             session_name("Taxis_UTEC");
             session_start();
             $_SESSION['infoUser'] = $resMotoristaLogin;
-            $_SESSION['tipoUtilizador'] = 'motorista'; //depois mudar isso para "motoristas" para corresponder às alterações do Kudiezo
+            $_SESSION['tipoUtilizador'] = 'motoristas';
             $this->view('motorista/home-motorista', []);
         } else {
             $this->view('paginas/login-form', []);

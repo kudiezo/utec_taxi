@@ -34,8 +34,8 @@ class Motoristas extends Controller {
         $tipoVeiculo = filter_input(INPUT_POST, 'tipoVeiculo', FILTER_SANITIZE_STRING);
         $empresa = filter_input(INPUT_POST, 'empresa', FILTER_SANITIZE_STRING);
         $email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_STRING);
-        $password1  = filter_input(INPUT_POST, 'password1', FILTER_SANITIZE_STRING);
-        $password2  = filter_input(INPUT_POST, 'password2', FILTER_SANITIZE_STRING);
+        $password1  = filter_input(INPUT_POST, 'password', FILTER_SANITIZE_STRING);
+        $password2  = filter_input(INPUT_POST, 'confPassword', FILTER_SANITIZE_STRING);
         
         if($password1 === $password2) {
             $this->motoristaModel->setNome($nome);
@@ -51,13 +51,13 @@ class Motoristas extends Controller {
             
             if($resultado != false) {
                 $data = [];
-                $this->view('', $data);
+                $this->view('paginas/login-form', $data);
             } else {
                 $data = [];
-                $this->view('', $data);
+                $this->view('paginas/sign-up', $data);
             }
         } else {
-            
+            $this->view('paginas/sign-up', []);
         }
         
     }

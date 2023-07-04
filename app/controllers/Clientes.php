@@ -9,7 +9,7 @@
  * Description of Clients
  */
 require_once APP_DIR . '/services/ClienteServices.php';
-require_once APP_DIR . '/models/Cliente.php';
+require_once APP_DIR . '/model/Cliente.php';
 class Clientes extends Controller {
     //put your code here
     private $clienteServices;
@@ -17,7 +17,7 @@ class Clientes extends Controller {
 
     public function __construct() {
         $this->clienteServices = new ClienteServices();
-        $this->clienteModel = new Cliente('', '', '', '', '', '', '', '');
+        $this->clienteModel = new Cliente('', '', '', '', '', '', '', '', '');
     }
     
     //Método padrão do controlador
@@ -35,8 +35,8 @@ class Clientes extends Controller {
         $morada = filter_input(INPUT_POST, 'morada', FILTER_SANITIZE_STRING);
         //$tipo_veiculo = filter_input(INPUT_POST, 'tipo_veiculo', FILTER_SANITIZE_STRING);
         $email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_STRING);
-        $password1  = filter_input(INPUT_POST, 'password1', FILTER_SANITIZE_STRING);
-        $password2  = filter_input(INPUT_POST, 'password2', FILTER_SANITIZE_STRING);
+        $password1  = filter_input(INPUT_POST, 'password', FILTER_SANITIZE_STRING);
+        $password2  = filter_input(INPUT_POST, 'confPassword', FILTER_SANITIZE_STRING);
         
         if($password1 === $password2) {
             $this->clienteModel->setNome($nome);
@@ -44,20 +44,19 @@ class Clientes extends Controller {
             $this->clienteModel->setMorada($morada);
             $this->clienteModel->setLocalizacao("0 0");
             $this->clienteModel->setEmail($email);
-            $this->clienteModel->setPassword($password1);
-            $this->clienteModel->setPassword($password2);
+            $this->clienteModel->setSenha($password1);
             
             $resultado = $this->clienteServices->cadastrar($this->clienteModel);
             
             if($resultado != false) {
-                $data = ['erro' => true, 'sucesso' => false];
-                $this->view('pages/body-login-cliente', $data);
+                $data = [];
+                $this->view('paginas/login-form', $data);
             } else {
-                $data = ['erro' => true, 'sucesso' => false];
-                $this->view('pages/body-adesao-cliente', $data);
+                $data = [];
+                $this->view('paginas/sign-up', $data);
             }
         } else {
-            
+            $this->view('paginas/sign-up', []);
         }
         
     }

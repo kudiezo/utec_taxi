@@ -12,8 +12,8 @@ class Cliente extends Utilizador {
         $this->localizacao = $localizacao;
     }
 
-    public function __construct($id, $nome, $email, $senha, $dataNasc, $morada, $perfil, $localizacao) {
-        parent::__construct($id, $nome, $email, $senha, $dataNasc, $morada, $perfil);
+    public function __construct($id, $nome, $email, $senha, $dataNasc, $morada, $tipoVeiculo, $empresa, $localizacao) {
+        parent::__construct($id, $nome, $email, $senha, $dataNasc, $morada, $tipoVeiculo, $empresa);
         $this->localizacao = $localizacao;
     }
 

@@ -30,7 +30,7 @@
                             src="<?= URL . 'public/img/logo/LOGO-UTEC-AMARELO-PNG.png' ?>" alt=""></a>
                     <span>FAÇA O SEU REGISTO</span>
                 </div>
-                <form class="row g-3" method="post" action="<?= URL . 'utilizador/cadastro'; ?>">
+                <form class="row g-3" method="post" action="<?= URL . 'clientes/cadastro'; ?>">
                     <div class="col-md-6">
                         <span>REGISTE-SE COMO:</span>
                     </div>
@@ -67,7 +67,7 @@
                     </div>
                     <div class="col-md-12">
                         <label for="inputData" class="form-label">Data de nascimento</label>
-                        <input type="date" name="data" class="form-control" id="inputData" required>
+                        <input type="date" name="dataNasc" class="form-control" id="inputData" required>
                     </div>
                     <div class="col-md-6">
                         <label for="password" class="form-label">Palavra-passe</label>
